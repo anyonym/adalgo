@@ -8,8 +8,17 @@
  * @example compterJusqua(5) → affiche 1, 2, 3, 4, 5
  */
 export const compterJusqua = (n) => {
-  // à compléter
-}
+  let nombres = "";
+  for (let i = 0; i <= n; i++) {
+    let nombre = String(i) + ", ";
+    if ((i = n)) {
+      nombres += String(i);
+    } else {
+      nombres += nombre;
+    }
+  }
+  console.log(nombres);
+};
 
 /**
  * Affiche uniquement les nombres pairs de 1 à n dans la console.
@@ -18,8 +27,17 @@ export const compterJusqua = (n) => {
  * @example afficherPairs(8) → affiche 2, 4, 6, 8
  */
 export const afficherPairs = (n) => {
-  // à compléter
-}
+  let nombres = "";
+  for (let i = 0; i <= n; i+2) {
+    let nombre = String(i) + ", ";
+    if ((i = n)) {
+      nombres += String(i);
+    } else {
+      nombres += nombre;
+    }
+  }
+  console.log(nombres);
+};
 
 /**
  * Retourne la somme de tous les entiers de 1 à n.
@@ -30,7 +48,7 @@ export const afficherPairs = (n) => {
  */
 export const somme = (n) => {
   // à compléter
-}
+};
 
 /**
  * Retourne le produit de tous les entiers de 1 à n (factorielle).
@@ -42,7 +60,7 @@ export const somme = (n) => {
  */
 export const produit = (n) => {
   // à compléter
-}
+};
 
 /**
  * Retourne le nombre d'entiers pairs entre 1 et n inclus.
@@ -54,7 +72,7 @@ export const produit = (n) => {
  */
 export const compterPairs = (n) => {
   // à compléter
-}
+};
 
 /**
  * Retourne un tableau contenant les n premiers multiples de n.
@@ -66,7 +84,7 @@ export const compterPairs = (n) => {
  */
 export const table = (n) => {
   // à compléter
-}
+};
 
 /**
  * Retourne un tableau contenant tous les multiples de n inférieurs ou égaux à limite.
@@ -79,7 +97,7 @@ export const table = (n) => {
  */
 export const multiplesJusqua = (n, limite) => {
   // à compléter
-}
+};
 
 /**
  * [FACULTATIF]
@@ -93,7 +111,7 @@ export const multiplesJusqua = (n, limite) => {
  */
 export const puissance = (base, exposant) => {
   // à compléter
-}
+};
 
 /**
  * [FACULTATIF]
@@ -108,7 +126,7 @@ export const puissance = (base, exposant) => {
  */
 export const estDivisibleParTous = (n, diviseurs) => {
   // à compléter
-}
+};
 
 /**
  * [FACULTATIF]
@@ -123,4 +141,4 @@ export const estDivisibleParTous = (n, diviseurs) => {
  */
 export const fibonacci = (n) => {
   // à compléter
-}
+};

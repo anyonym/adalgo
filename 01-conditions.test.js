@@ -73,4 +73,7 @@ describe("fizzbuzz", () => {
   it("retourne Fizz si n est divisible par 3", () => {
     expect(fizzbuzz(9)).toBe("Fizz")
   })
+  it("retourne `n` si n n'est divisible par aucun des deux", () => {
+    expect(fizzbuzz(7)).toBe("7")
+  })
 })

@@ -43,6 +43,7 @@ FIN
 ```
 
 ## Exo 3
+
 ```text
 Algorithme pour détecter le nombre le plus élevé
 
@@ -71,7 +72,7 @@ FIN
 ```text
 Algorithme pour retourner une mention relative à la note sur 20
 
-Variables
+Variable
 note : NUMBER
 
 INIT
@@ -98,7 +99,7 @@ FIN
 ```text
 Algorithme pour déterminer si un nombre est un multiple de 3 et / ou 5
 
-Variables
+Variable
 n : NUMBER
 
 INIT
@@ -111,6 +112,8 @@ START
             RETURN Buzz
         SINON SI (n % 3 === 0) ALORS
             RETURN Fizz
+        SINON
+            RETURN str(n)
         FIN SI
     FIN FUNCTION
 FIN
