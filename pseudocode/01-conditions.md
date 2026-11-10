@@ -96,9 +96,22 @@ FIN
 ## Exo 5
 
 ```text
+Algorithme pour déterminer si un nombre est un multiple de 3 et / ou 5
+
 Variables
+n : NUMBER
+
 INIT
+    LIRE n
 START
-DEBUT FUNCTION ... (ARG)
+    DEBUT FUNCTION fizzbuzz (n)
+        SI (n % 3 === 0 && n % 5 === 0) ALORS
+            RETURN FizzBuzz
+        SINON SI (n % 5 === 0) ALORS
+            RETURN Buzz
+        SINON SI (n % 3 === 0) ALORS
+            RETURN Fizz
+        FIN SI
+    FIN FUNCTION
 FIN
 ```
