@@ -47,7 +47,11 @@ export const afficherPairs = (n) => {
  * @example somme(5) → 15  (1+2+3+4+5)
  */
 export const somme = (n) => {
-  // à compléter
+  let totalSomme = 0
+  for (let i = 0; i <= n ; i++) {
+    totalSomme += i;
+  }
+  return totalSomme
 };
 
 /**
@@ -59,7 +63,11 @@ export const somme = (n) => {
  * @example produit(0) → 1
  */
 export const produit = (n) => {
-  // à compléter
+  let totalFacto = 1
+  for (let i = 1; i <= n ; i++) {
+    totalFacto = totalFacto*i;
+  }
+  return totalFacto
 };
 
 /**

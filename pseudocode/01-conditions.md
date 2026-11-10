@@ -11,7 +11,7 @@ n : NUMBER
 INIT
     LIRE n
 START
-    DEBUT FUNCTION estPositif (n) :
+    DEBUT FUNCTION estPositif (n)
         SI (n >= 0) ALORS
             RETURN true
         SINON

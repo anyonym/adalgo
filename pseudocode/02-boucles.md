@@ -31,7 +31,7 @@ FIN
 ## Exo 2
 
 ```text
-Algorithme pour afficher uniquement les nombres pairs
+Algorithme pour afficher uniquement les nombres pairs d'une suite d'itérations
 
 Variables
 n : NUMBER
@@ -59,15 +59,22 @@ FIN
 ## Exo 3
 
 ```text
-Algorithme pour
+Algorithme pour calculer la somme des nombres d'une suite d'itérations
 
-Variable
+Variables
+n : NUMBER
+i : NUMBER
+totalSomme : NUMBER
 
 INIT
-    LIRE
+    LIRE n
 START
-    DEBUT FUNCTION ... (ARG) :
-
+    DEBUT FUNCTION somme (n)
+        let totalSomme = 0
+        POUR i = 0, TANT QUE i <= n, i++
+            totalSomme += i
+        FIN POUR
+        RETURN totalSomme
     FIN FUNCTION
 FIN
 ```
@@ -75,15 +82,22 @@ FIN
 ## Exo 4
 
 ```text
-Algorithme pour
+Algorithme pour calculer le produit de l'ensemble des nombres d'une suite d'itérations
 
-Variable
+Variables
+n : NUMBER
+i : NUMBER
+totalFacto : NUMBER
 
 INIT
-    LIRE
+    LIRE n
 START
-    DEBUT FUNCTION ... (ARG) :
-
+    DEBUT FUNCTION produit (n)
+    let totalFacto = 1
+        POUR i = 1, TANT QUE i <= n, i++
+            totalFacto = totalFacto * i
+        FIN POUR
+        RETURN totalFacto
     FIN FUNCTION
 FIN
 ```
@@ -98,7 +112,7 @@ Variable
 INIT
     LIRE
 START
-    DEBUT FUNCTION ... (ARG) :
+    DEBUT FUNCTION ... (ARG)
 
     FIN FUNCTION
 FIN
@@ -114,7 +128,7 @@ Variable
 INIT
     LIRE
 START
-    DEBUT FUNCTION ... (ARG) :
+    DEBUT FUNCTION ... (ARG)
 
     FIN FUNCTION
 FIN
@@ -130,7 +144,7 @@ Variable
 INIT
     LIRE
 START
-    DEBUT FUNCTION ... (ARG) :
+    DEBUT FUNCTION ... (ARG)
 
     FIN FUNCTION
 FIN
@@ -146,7 +160,7 @@ Variable
 INIT
     LIRE
 START
-    DEBUT FUNCTION ... (ARG) :
+    DEBUT FUNCTION ... (ARG)
 
     FIN FUNCTION
 FIN
@@ -162,7 +176,7 @@ Variable
 INIT
     LIRE
 START
-    DEBUT FUNCTION ... (ARG) :
+    DEBUT FUNCTION ... (ARG)
 
     FIN FUNCTION
 FIN
