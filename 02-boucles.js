@@ -28,7 +28,7 @@ export const compterJusqua = (n) => {
  */
 export const afficherPairs = (n) => {
   let nombres = "";
-  for (let i = 0; i <= n; i+2) {
+  for (let i = 0; i <= n; i + 2) {
     let nombre = String(i) + ", ";
     if ((i = n)) {
       nombres += String(i);
@@ -47,11 +47,11 @@ export const afficherPairs = (n) => {
  * @example somme(5) → 15  (1+2+3+4+5)
  */
 export const somme = (n) => {
-  let totalSomme = 0
-  for (let i = 0; i <= n ; i++) {
+  let totalSomme = 0;
+  for (let i = 0; i <= n; i++) {
     totalSomme += i;
   }
-  return totalSomme
+  return totalSomme;
 };
 
 /**
@@ -63,11 +63,11 @@ export const somme = (n) => {
  * @example produit(0) → 1
  */
 export const produit = (n) => {
-  let totalFacto = 1
-  for (let i = 1; i <= n ; i++) {
-    totalFacto = totalFacto*i;
+  let totalFacto = 1;
+  for (let i = 1; i <= n; i++) {
+    totalFacto = totalFacto * i;
   }
-  return totalFacto
+  return totalFacto;
 };
 
 /**
@@ -79,7 +79,13 @@ export const produit = (n) => {
  * @example compterPairs(7)  → 3
  */
 export const compterPairs = (n) => {
-  // à compléter
+  let totalPairs = 0;
+  for (let i = 1; i <= n; i++) {
+    if (i % 2 === 0) {
+      totalPairs++;
+    }
+  }
+  return totalPairs;
 };
 
 /**

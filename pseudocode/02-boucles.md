@@ -93,7 +93,7 @@ INIT
     LIRE n
 START
     DEBUT FUNCTION produit (n)
-    let totalFacto = 1
+        let totalFacto = 1
         POUR i = 1, TANT QUE i <= n, i++
             totalFacto = totalFacto * i
         FIN POUR
@@ -105,15 +105,24 @@ FIN
 ## Exo 5
 
 ```text
-Algorithme pour
+Algorithme pour compter le nombre d'entiers pairs
 
-Variable
+Variables
+n : NUMBER
+i : NUMBER
+totalPairs : NUMBER
 
 INIT
     LIRE
 START
-    DEBUT FUNCTION ... (ARG)
-
+    DEBUT FUNCTION compterPairs (n)
+        let : totalPairs = 0
+        POUR i = 1, TANT QUE i <= n, i+2
+            SI (i % 2 = 0) ALORS
+                totalPairs++
+            FIN SI
+        FIN POUR
+        RETURN totalPairs
     FIN FUNCTION
 FIN
 ```
