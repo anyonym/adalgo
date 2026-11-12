@@ -9,8 +9,14 @@
  * @example maximum([3, 7, 2, 9, 1]) → 9
  */
 export const maximum = (tableau) => {
-  // à compléter
-}
+  let maximum = tableau[0];
+  for (let i = 1; i < tableau.length; i++) {
+    if (tableau[i] > maximum) {
+      maximum = tableau[i];
+    }
+  }
+  return maximum;
+};
 
 /**
  * Retourne la plus petite valeur d'un tableau de nombres. Sans Math.min().
@@ -20,7 +26,7 @@ export const maximum = (tableau) => {
  */
 export const minimum = (tableau) => {
   // à compléter
-}
+};
 
 /**
  * Retourne la moyenne des valeurs. Retourne null si le tableau est vide.
@@ -30,7 +36,7 @@ export const minimum = (tableau) => {
  */
 export const moyenne = (tableau) => {
   // à compléter
-}
+};
 
 /**
  * Retourne true si la valeur est présente dans le tableau, false sinon.
@@ -42,7 +48,7 @@ export const moyenne = (tableau) => {
  */
 export const contient = (tableau, valeur) => {
   // à compléter
-}
+};
 
 /**
  * Retourne le nombre de fois que la valeur apparaît dans le tableau.
@@ -53,7 +59,7 @@ export const contient = (tableau, valeur) => {
  */
 export const compter = (tableau, valeur) => {
   // à compléter
-}
+};
 
 /**
  * [FACULTATIF]
@@ -65,7 +71,7 @@ export const compter = (tableau, valeur) => {
  */
 export const inverser = (tableau) => {
   // à compléter
-}
+};
 
 /**
  * [FACULTATIF]
@@ -76,4 +82,4 @@ export const inverser = (tableau) => {
  */
 export const sansDoublons = (tableau) => {
   // à compléter
-}
+};
