@@ -135,7 +135,7 @@ Algorithme pour détecter les n premiers multiples de n
 Variables
 n : NUMBER
 i : NUMBER
-resultat : NUMBER[]
+resultat[] : NUMBER
 
 INIT
     LIRE n
@@ -159,7 +159,7 @@ Variables
 n : NUMBER
 limite : NUMBER
 i : NUMBER
-resultat : NUMBER[]
+resultat[] : NUMBER
 
 INIT
     LIRE n
