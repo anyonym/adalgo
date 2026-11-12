@@ -45,7 +45,7 @@ export const moyenne = (tableau) => {
   for (let i = 0; i < tableau.length; i++) {
     somme += tableau[i];
   }
-  if ((tableau.length === 0)) {
+  if (tableau.length === 0) {
     return null;
   }
   let moyenne = somme / tableau.length;
@@ -61,7 +61,15 @@ export const moyenne = (tableau) => {
  * @example contient([1, 2, 3], 2) → true / contient([1, 2, 3], 5) → false
  */
 export const contient = (tableau, valeur) => {
-  // à compléter
+  for (let i = 0; i < tableau.length; i++) {
+    if (tableau[i] === valeur) {
+      return true;
+    }
+  }
+  if (tableau.length === 0) {
+    return null;
+  }
+  return false;
 };
 
 /**

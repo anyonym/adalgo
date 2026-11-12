@@ -66,7 +66,7 @@ START
         POUR i de 0 à tab[].length par pas de 1 FAIRE
             somme = tab[i]++ 
         FIN POUR
-        SI tab[].length = 0
+        SI tab[].length = 0 ALORS
             RETURN null
         FIN SI
         moyenne = somme / tableau.length
@@ -78,15 +78,26 @@ FIN
 ## Exo 4
 
 ```text
-Algorithme pour
+Algorithme pour retourner true si la valeur est présente dans le tableau, false sinon. Sans utiliser .includes()
 
-Variable
+Variables
+i : NUMBER
+tab[] : NUMBER
+valeur : NUMBER
 
 INIT
-    LIRE
+    LIRE tab[]
 START
-    DEBUT FUNCTION ... (ARG)
-
+    DEBUT FUNCTION contient (tab[], valeur)
+    POUR i de 0 à tab[].length par pas de 1 FAIRE
+        SI tab[i] = valeur ALORS
+            RETURN true
+        FIN SI
+    FIN POUR
+    SI tab[].length = 0 ALORS
+        RETURN null
+    FIN SI
+    RETURN false
     FIN FUNCTION
 FIN
 ```
