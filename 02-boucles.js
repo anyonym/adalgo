@@ -8,8 +8,17 @@
  * @example compterJusqua(5) → affiche 1, 2, 3, 4, 5
  */
 export const compterJusqua = (n) => {
-  // à compléter
-}
+  let nombres = "";
+  for (let i = 0; i <= n; i++) {
+    let nombre = String(i) + ", ";
+    if ((i = n)) {
+      nombres += String(i);
+    } else {
+      nombres += nombre;
+    }
+  }
+  console.log(nombres);
+};
 
 /**
  * Affiche uniquement les nombres pairs de 1 à n dans la console.
@@ -18,8 +27,17 @@ export const compterJusqua = (n) => {
  * @example afficherPairs(8) → affiche 2, 4, 6, 8
  */
 export const afficherPairs = (n) => {
-  // à compléter
-}
+  let nombres = "";
+  for (let i = 0; i <= n; i + 2) {
+    let nombre = String(i) + ", ";
+    if ((i = n)) {
+      nombres += String(i);
+    } else {
+      nombres += nombre;
+    }
+  }
+  console.log(nombres);
+};
 
 /**
  * Retourne la somme de tous les entiers de 1 à n.
@@ -29,8 +47,12 @@ export const afficherPairs = (n) => {
  * @example somme(5) → 15  (1+2+3+4+5)
  */
 export const somme = (n) => {
-  // à compléter
-}
+  let totalSomme = 0;
+  for (let i = 0; i <= n; i++) {
+    totalSomme += i;
+  }
+  return totalSomme;
+};
 
 /**
  * Retourne le produit de tous les entiers de 1 à n (factorielle).
@@ -41,8 +63,12 @@ export const somme = (n) => {
  * @example produit(0) → 1
  */
 export const produit = (n) => {
-  // à compléter
-}
+  let totalFacto = 1;
+  for (let i = 1; i <= n; i++) {
+    totalFacto = totalFacto * i;
+  }
+  return totalFacto;
+};
 
 /**
  * Retourne le nombre d'entiers pairs entre 1 et n inclus.
@@ -53,8 +79,14 @@ export const produit = (n) => {
  * @example compterPairs(7)  → 3
  */
 export const compterPairs = (n) => {
-  // à compléter
-}
+  let totalPairs = 0;
+  for (let i = 1; i <= n; i++) {
+    if (i % 2 === 0) {
+      totalPairs++;
+    }
+  }
+  return totalPairs;
+};
 
 /**
  * Retourne un tableau contenant les n premiers multiples de n.
@@ -65,8 +97,12 @@ export const compterPairs = (n) => {
  * @example table(0) → []
  */
 export const table = (n) => {
-  // à compléter
-}
+  const resultat = [];
+  for (let i = 1; i <= n; i++) {
+    resultat.push(n * i);
+  }
+  return resultat;
+};
 
 /**
  * Retourne un tableau contenant tous les multiples de n inférieurs ou égaux à limite.
@@ -78,8 +114,15 @@ export const table = (n) => {
  * @example multiplesJusqua(7, 20) → [7, 14]
  */
 export const multiplesJusqua = (n, limite) => {
-  // à compléter
-}
+  if (n === 0) {
+    return [];
+  }
+  const resultat = [];
+  for (let i = 1; n * i <= limite; i++) {
+    resultat.push(n * i);
+  }
+  return resultat;
+};
 
 /**
  * [FACULTATIF]
@@ -93,7 +136,7 @@ export const multiplesJusqua = (n, limite) => {
  */
 export const puissance = (base, exposant) => {
   // à compléter
-}
+};
 
 /**
  * [FACULTATIF]
@@ -108,7 +151,7 @@ export const puissance = (base, exposant) => {
  */
 export const estDivisibleParTous = (n, diviseurs) => {
   // à compléter
-}
+};
 
 /**
  * [FACULTATIF]
@@ -123,4 +166,4 @@ export const estDivisibleParTous = (n, diviseurs) => {
  */
 export const fibonacci = (n) => {
   // à compléter
-}
+};
