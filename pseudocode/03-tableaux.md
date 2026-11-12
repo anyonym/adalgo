@@ -15,7 +15,7 @@ START
     DEBUT FUNCTION maximum (tab[])
         POUR i de 0 à tab[].length par pas de 1 FAIRE
             SI tab[i] > maximum ALORS
-                maximum = tableau[i]
+                maximum = tab[i]
             FIN SI
         FIN POUR
         RETURN maximum
@@ -26,15 +26,23 @@ FIN
 ## Exo 2
 
 ```text
-Algorithme pour
+Algorithme pour détecter la plus petite valeur d'un tableau de nombres sans Math.min()
 
-Variable
+Variables
+i : NUMBER
+tab[] : NUMBER
+minimum : NUMBER
 
 INIT
-    LIRE
+    LIRE tab[]
 START
-    DEBUT FUNCTION ... (ARG)
-
+    DEBUT FUNCTION minimum (tab[])
+        POUR i de 0 à tab[].length par pas de 1 FAIRE
+            SI tab[i] < minimum ALORS
+                minimum = tab[i]
+            FIN SI
+        FIN POUR
+        RETURN minimum
     FIN FUNCTION
 FIN
 ```
