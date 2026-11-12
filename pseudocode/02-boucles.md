@@ -14,10 +14,10 @@ INIT
     LIRE n
 START
     DEBUT FUNCTION compterJusqua (n) :
-        let nombres <- ""
-        POUR i = 1, TANT QUE i <= n, i++
-            let nombre = str(i) + ", "
-            SI (i = n) ALORS
+        nombres <- ""
+        POUR i de 1 à n par pas de 1 FAIRE
+            nombre = str(i) + ", "
+            SI i = n ALORS
                 nombres += str(i)
             SINON
                 nombres += nombre
@@ -42,10 +42,10 @@ INIT
     LIRE n
 START
     DEBUT FUNCTION afficherPairs (n) :
-        let nombres <- ""
-        POUR i = 0, TANT QUE i <= n, i+2
-            let nombre = str(i) + ", "
-            SI (i = n) ALORS
+        nombres <- ""
+        POUR i de 0 à n par pas de 2 FAIRE
+            nombre = str(i) + ", "
+            SI i = n ALORS
                 nombres += str(i)
             SINON
                 nombres += nombre
@@ -70,8 +70,8 @@ INIT
     LIRE n
 START
     DEBUT FUNCTION somme (n)
-        let totalSomme = 0
-        POUR i = 0, TANT QUE i <= n, i++
+        totalSomme <- 0
+        POUR i de 0 à n par pas de 1 FAIRE
             totalSomme += i
         FIN POUR
         RETURN totalSomme
@@ -93,8 +93,8 @@ INIT
     LIRE n
 START
     DEBUT FUNCTION produit (n)
-        let totalFacto = 1
-        POUR i = 1, TANT QUE i <= n, i++
+        totalFacto <- 1
+        POUR i de 1 à n par pas de 1 FAIRE
             totalFacto = totalFacto * i
         FIN POUR
         RETURN totalFacto
@@ -116,9 +116,9 @@ INIT
     LIRE
 START
     DEBUT FUNCTION compterPairs (n)
-        let : totalPairs = 0
-        POUR i = 1, TANT QUE i <= n, i+2
-            SI (i % 2 = 0) ALORS
+        totalPairs <- 0
+        POUR i de 1 à n par pas de 2 FAIRE
+            SI i % 2 = 0 ALORS
                 totalPairs++
             FIN SI
         FIN POUR
@@ -130,15 +130,22 @@ FIN
 ## Exo 6
 
 ```text
-Algorithme pour
+Algorithme pour détecter les n premiers multiples de n
 
-Variable
+Variables
+n : NUMBER
+i : NUMBER
+resultat : NUMBER[]
 
 INIT
-    LIRE
+    LIRE n
 START
-    DEBUT FUNCTION ... (ARG)
-
+    DEBUT FUNCTION table (n)
+    resultat <- tableau vide
+    POUR i de 1 à n par pas de 1 FAIRE
+        AJOUTER n * i à resultat
+    FIN POUR
+    RETURN resultat
     FIN FUNCTION
 FIN
 ```

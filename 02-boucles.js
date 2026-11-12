@@ -97,7 +97,11 @@ export const compterPairs = (n) => {
  * @example table(0) → []
  */
 export const table = (n) => {
-  // à compléter
+  const resultat = []
+  for (let i = 1; i <= n; i++) {
+    resultat.push(n * i)
+  }
+  return resultat
 };
 
 /**

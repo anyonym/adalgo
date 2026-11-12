@@ -12,7 +12,7 @@ INIT
     LIRE n
 START
     DEBUT FUNCTION estPositif (n)
-        SI (n >= 0) ALORS
+        SI n >= 0 ALORS
             RETURN true
         SINON
             RETURN false
@@ -33,7 +33,7 @@ INIT
     LIRE n
 START
     DEBUT FUNCTION estPair (n)
-        SI (n % 2 = 0) ALORS
+        SI n % 2 = 0 ALORS
             RETURN true
         SINON
             RETURN false
@@ -56,11 +56,11 @@ INIT
     LIRE b
 START
     DEBUT FUNCTION max (a, b)
-        SI (a > b) ALORS
+        SI a > b ALORS
             RETURN a
-        SINON SI (b > a)
+        SINON SI b > a
             RETURN b
-        SINON SI (a = b)
+        SINON SI a = b
             RETURN a
         FIN SI
     FIN FUNCTION
@@ -79,15 +79,15 @@ INIT
     LIRE note
 START
     DEBUT FUNCTION mention (note)
-        SI (note >= 16) ALORS
+        SI note >= 16 ALORS
             RETURN "Très bien"
-        SINON SI (note >= 14) ALORS
+        SINON SI note >= 14 ALORS
             RETURN "Bien"
-        SINON SI (note >= 12) ALORS
+        SINON SI note >= 12 ALORS
             RETURN "Assez bien"
-        SINON SI (note >= 10) ALORS
+        SINON SI note >= 10 ALORS
             RETURN "Passable"
-        SINON SI (note < 10) ALORS
+        SINON SI note < 10 ALORS
             RETURN "Insuffisant"
         FIN SI
     FIN FUNCTION
@@ -106,11 +106,11 @@ INIT
     LIRE n
 START
     DEBUT FUNCTION fizzbuzz (n)
-        SI (n % 3 === 0 && n % 5 === 0) ALORS
+        SI n % 3 = 0 ET n % 5 = 0 ALORS
             RETURN FizzBuzz
-        SINON SI (n % 5 === 0) ALORS
+        SINON SI n % 5 = 0 ALORS
             RETURN Buzz
-        SINON SI (n % 3 === 0) ALORS
+        SINON SI n % 3 = 0 ALORS
             RETURN Fizz
         SINON
             RETURN str(n)
