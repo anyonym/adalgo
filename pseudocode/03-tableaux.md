@@ -11,8 +11,8 @@ maximum : NUMBER
 INIT
     LIRE tab[]
 START
-    let maximum = tab[0]
     DEBUT FUNCTION maximum (tab[])
+        maximum = tab[0]
         POUR i de 0 à tab[].length par pas de 1 FAIRE
             SI tab[i] > maximum ALORS
                 maximum = tab[i]
@@ -37,6 +37,7 @@ INIT
     LIRE tab[]
 START
     DEBUT FUNCTION minimum (tab[])
+        minimum = tab[0]
         POUR i de 0 à tab[].length par pas de 1 FAIRE
             SI tab[i] < minimum ALORS
                 minimum = tab[i]
@@ -50,15 +51,26 @@ FIN
 ## Exo 3
 
 ```text
-Algorithme pour
+Algorithme pour calculer la moyenne des valeurs d'un tableau
 
-Variable
+Variables
+i : NUMBER
+tab[] : NUMBER
+moyenne : NUMBER
 
 INIT
-    LIRE
+    LIRE tab[]
 START
-    DEBUT FUNCTION ... (ARG)
-
+    DEBUT FUNCTION moyenne (tab[])
+        somme = 0
+        POUR i de 0 à tab[].length par pas de 1 FAIRE
+            somme = tab[i]++ 
+        FIN POUR
+        SI tab[].length = 0
+            RETURN null
+        FIN SI
+        moyenne = somme / tableau.length
+        RETURN moyenne
     FIN FUNCTION
 FIN
 ```

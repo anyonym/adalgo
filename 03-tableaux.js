@@ -31,7 +31,7 @@ export const minimum = (tableau) => {
       minimum = tableau[i];
     }
   }
-  return minimum
+  return minimum;
 };
 
 /**
@@ -41,7 +41,15 @@ export const minimum = (tableau) => {
  * @example moyenne([2, 4, 6]) → 4 / moyenne([]) → null
  */
 export const moyenne = (tableau) => {
-  // à compléter
+  let somme = 0;
+  for (let i = 0; i < tableau.length; i++) {
+    somme += tableau[i];
+  }
+  if ((tableau.length === 0)) {
+    return null;
+  }
+  let moyenne = somme / tableau.length;
+  return moyenne;
 };
 
 /**
