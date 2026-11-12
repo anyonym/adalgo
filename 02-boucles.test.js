@@ -100,17 +100,35 @@ describe("multiplesJusqua", () => {
 // [FACULTATIF] Même pattern que somme/produit — à toi.
 // Cas à couvrir : puissance(2, 10) → 1024, puissance(3, 3) → 27, puissance(5, 0) → 1.
 describe("puissance", () => {
-  // à compléter
+  it("retourne 1024 pour 2 puissance 10", () => {
+    expect(puissance(2, 10)).toBe(1024);
+  });
+  it("retourne 27 pour 3 puissance 3", () => {
+    expect(puissance(3, 3)).toBe(27);
+  });
+  it("retourne 1 pour 5 puissance 0", () => {
+    expect(puissance(5, 0)).toBe(1);
+  });
 });
 
 // [FACULTATIF] Même pattern que table avec .toEqual() — à toi.
 // Cas à couvrir : estDivisibleParTous(12, [2, 3, 4]) → true, estDivisibleParTous(10, [2, 3]) → false.
 describe("estDivisibleParTous", () => {
-  // à compléter
+  it("retourne true pour 12 divisible par [2, 3, 4]", () => {
+    expect(estDivisibleParTous(12, [2, 3, 4])).toEqual(true);
+  });
+  it("retourne false pour 10 divisible par [2, 3]", () => {
+    expect(estDivisibleParTous(10, [2, 3])).toEqual(false);
+  });
 });
 
 // [FACULTATIF] Même pattern que table — à toi.
 // Cas à couvrir : fibonacci(6) → [0, 1, 1, 2, 3, 5], fibonacci(1) → [0].
 describe("fibonacci", () => {
-  // à compléter
+  it("retourne les 6 premiers nombres de Fibonacci", () => {
+    expect(fibonacci(6)).toEqual([0, 1, 1, 2, 3, 5]);
+  });
+  it("retourne le 1er nombre de Fibonacci", () => {
+    expect(fibonacci(1)).toEqual([0]);
+  });
 });

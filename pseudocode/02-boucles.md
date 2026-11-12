@@ -163,8 +163,9 @@ resultat[] : NUMBER
 
 INIT
     LIRE n
+    LIRE limite
 START
-    DEBUT FUNCTION multiplesJusqua (n)
+    DEBUT FUNCTION multiplesJusqua (n, limite)
         SI n = 0 ALORS
             RETURN tableau vide 
         FIN SI
@@ -180,15 +181,23 @@ FIN
 ## Exo 8
 
 ```text
-Algorithme pour
+Algorithme pour calculer le résultat d'un nombre de base élevé à la puissance de son exposant. Sans Math.pow().
 
-Variable
+Variables
+base : NUMBER
+exposant : NUMBER
+nbX : NUMBER
 
 INIT
-    LIRE
+    LIRE base
+    LIRE exposant
 START
-    DEBUT FUNCTION ... (ARG)
-
+    DEBUT FUNCTION puissance (base, exposant)
+        nbX <- 1
+        POUR i de 0 à exposant par pas de 1 FAIRE
+            nbx = nbX * base
+        FIN POUR
+        return nbX
     FIN FUNCTION
 FIN
 ```
@@ -196,15 +205,24 @@ FIN
 ## Exo 9
 
 ```text
-Algorithme pour
+Algorithme pour détecter si un nombre est divisible par toutes la valeurs d'un tableau
 
-Variable
+Variables
+n : NUMBER
+diviseurs[] : NUMBER
+i : NUMBER
 
 INIT
-    LIRE
+    LIRE n
+    LIRE diviseurs[]
 START
-    DEBUT FUNCTION ... (ARG)
-
+    DEBUT FUNCTION estDivisibleParTous (n, diviseurs[])
+        POUR i de 0 à n par pas de 1 FAIRE
+            SI n % diviseurs[i] !== 0 ALORS
+                RETURN false
+            FIN SI
+        FIN POUR
+        RETURN true
     FIN FUNCTION
 FIN
 ```
@@ -212,15 +230,28 @@ FIN
 ## Exo 10
 
 ```text
-Algorithme pour
+Algorithme pour retourner un tableau contenant les n premiers nombres de Fibonacci
 
-Variable
+Variables
+n : NUMBER
+fib[] : NUMBER
+i: NUMBER
 
 INIT
-    LIRE
+    LIRE n
 START
-    DEBUT FUNCTION ... (ARG)
-
+    DEBUT FUNCTION fibonacci (n)
+        SI n <= 0 ALORS
+            RETURN tableau vide
+        FIN SI
+        SI n = 1 ALORS
+            RETURN fib[0]
+        FIN SI
+        fib[] <- [0, 1]
+        POUR i de 0 à n - 2 par pas de 1 FAIRE
+            AJOUTER fib[fib.length -1] + fib[fib.length -2] à fib[i]
+        FIN POUR
+        RETURN fib[i] 
     FIN FUNCTION
 FIN
 ```

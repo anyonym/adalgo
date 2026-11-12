@@ -135,11 +135,14 @@ export const multiplesJusqua = (n, limite) => {
  * @example puissance(5, 0)  → 1
  */
 export const puissance = (base, exposant) => {
-  // à compléter
+  let nbX = 1;
+  for (let i = 0; i < exposant; i++) {
+    nbX = nbX * base;
+  }
+  return nbX;
 };
 
 /**
- * [FACULTATIF]
  * [FACULTATIF]
  * Retourne true si n est divisible par tous les nombres du tableau diviseurs.
  * Pattern : boucle + condition de sortie anticipée.
@@ -149,12 +152,17 @@ export const puissance = (base, exposant) => {
  * @example estDivisibleParTous(12, [2, 3, 4]) → true
  * @example estDivisibleParTous(10, [2, 3])    → false
  */
+
 export const estDivisibleParTous = (n, diviseurs) => {
-  // à compléter
+  for (let i = 0; i < diviseurs.length; i++) {
+    if (n % diviseurs[i] !== 0) {
+      return false;
+    }
+  }
+  return true;
 };
 
 /**
- * [FACULTATIF]
  * [FACULTATIF]
  * Retourne un tableau contenant les n premiers nombres de Fibonacci.
  * La suite commence par [0, 1] et chaque nombre est la somme des deux précédents.
@@ -165,5 +173,15 @@ export const estDivisibleParTous = (n, diviseurs) => {
  * @example fibonacci(1) → [0]
  */
 export const fibonacci = (n) => {
-  // à compléter
+  if (n <= 0) {
+    return [];
+  }
+  if (n === 1) {
+    return [0];
+  }
+  const fib = [0, 1];
+  for (let i = 0; i < n - 2; i++) {
+    fib.push(fib[fib.length - 1] + fib[fib.length - 2]);
+  }
+  return fib;
 };

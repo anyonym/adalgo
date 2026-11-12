@@ -115,6 +115,7 @@ compteur : NUMBER
 
 INIT
     LIRE tab[]
+    LIRE valeur
 START
     DEBUT FUNCTION compter (tab[], valeur)
     compteur <- 0
