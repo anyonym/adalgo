@@ -12,7 +12,7 @@ INIT
     LIRE tab[]
 START
     DEBUT FUNCTION maximum (tab[])
-        maximum = tab[0]
+        maximum <- tab[0]
         POUR i de 0 à tab[].length par pas de 1 FAIRE
             SI tab[i] > maximum ALORS
                 maximum = tab[i]
@@ -62,7 +62,7 @@ INIT
     LIRE tab[]
 START
     DEBUT FUNCTION moyenne (tab[])
-        somme = 0
+        somme <- 0
         POUR i de 0 à tab[].length par pas de 1 FAIRE
             somme = tab[i]++ 
         FIN POUR
@@ -105,15 +105,28 @@ FIN
 ## Exo 5
 
 ```text
-Algorithme pour
+Algorithme pour compter le nombre de fois que la valeur apparaît dans un tableau
 
-Variable
+Variables
+i : NUMBER
+tab[] : NUMBER
+valeur : NUMBER
+compteur : NUMBER
 
 INIT
-    LIRE
+    LIRE tab[]
 START
-    DEBUT FUNCTION ... (ARG)
-
+    DEBUT FUNCTION compter (tab[], valeur)
+    compteur <- 0
+        POUR i de 0 à tab[].length pr pas de 1 FAIRE
+            SI tab[i] = valeur ALORS
+                compteur++
+            FIN SI
+        FIN POUR
+        SI tab[].length = 0 ALORS
+            RETURN null
+        FIN SI
+        RETURN compteur
     FIN FUNCTION
 FIN
 ```
