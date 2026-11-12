@@ -141,11 +141,11 @@ INIT
     LIRE n
 START
     DEBUT FUNCTION table (n)
-    resultat <- tableau vide
-    POUR i de 1 à n par pas de 1 FAIRE
-        AJOUTER n * i à resultat
-    FIN POUR
-    RETURN resultat
+        resultat <- tableau vide
+        POUR i de 1 à n par pas de 1 FAIRE
+            AJOUTER n * i à resultat
+        FIN POUR
+        RETURN resultat
     FIN FUNCTION
 FIN
 ```
@@ -153,15 +153,26 @@ FIN
 ## Exo 7
 
 ```text
-Algorithme pour
+Algorithme pour détecter les multiples d'un nombre inférieurs ou égaux à un nombre limite défini
 
-Variable
+Variables
+n : NUMBER
+limite : NUMBER
+i : NUMBER
+resultat : NUMBER[]
 
 INIT
-    LIRE
+    LIRE n
 START
-    DEBUT FUNCTION ... (ARG)
-
+    DEBUT FUNCTION multiplesJusqua (n)
+        SI n = 0 ALORS
+            RETURN tableau vide 
+        FIN SI
+        resultat <- tableau vide
+        POUR i de 1 à n * 1 <= limite par pas de 1
+            AJOUTER n * i à resultat
+        FIN POUR
+        RETURN resultat
     FIN FUNCTION
 FIN
 ```
@@ -183,6 +194,22 @@ FIN
 ```
 
 ## Exo 9
+
+```text
+Algorithme pour
+
+Variable
+
+INIT
+    LIRE
+START
+    DEBUT FUNCTION ... (ARG)
+
+    FIN FUNCTION
+FIN
+```
+
+## Exo 10
 
 ```text
 Algorithme pour

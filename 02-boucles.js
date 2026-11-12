@@ -97,11 +97,11 @@ export const compterPairs = (n) => {
  * @example table(0) → []
  */
 export const table = (n) => {
-  const resultat = []
+  const resultat = [];
   for (let i = 1; i <= n; i++) {
-    resultat.push(n * i)
+    resultat.push(n * i);
   }
-  return resultat
+  return resultat;
 };
 
 /**
@@ -114,7 +114,14 @@ export const table = (n) => {
  * @example multiplesJusqua(7, 20) → [7, 14]
  */
 export const multiplesJusqua = (n, limite) => {
-  // à compléter
+  if (n === 0) {
+    return [];
+  }
+  const resultat = [];
+  for (let i = 1; n * i <= limite; i++) {
+    resultat.push(n * i);
+  }
+  return resultat;
 };
 
 /**
