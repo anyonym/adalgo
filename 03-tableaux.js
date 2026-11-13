@@ -83,13 +83,13 @@ export const compter = (tableau, valeur) => {
   let compteur = 0;
   for (let i = 0; i < tableau.length; i++) {
     if (tableau[i] === valeur) {
-      compteur++
-    }  
+      compteur++;
+    }
   }
   if (tableau.length === 0) {
     return null;
   }
-  return compteur
+  return compteur;
 };
 
 /**
@@ -101,7 +101,11 @@ export const compter = (tableau, valeur) => {
  * @example inverser([1, 2, 3]) → [3, 2, 1]
  */
 export const inverser = (tableau) => {
-  // à compléter
+  const inverse = [];
+  for (let i = tableau.length - 1; i >= 0; i--) {
+    inverse.push(tableau[i]);
+  }
+  return inverse;
 };
 
 /**
@@ -112,5 +116,11 @@ export const inverser = (tableau) => {
  * @example sansDoublons([1, 2, 2, 3, 1]) → [1, 2, 3]
  */
 export const sansDoublons = (tableau) => {
-  // à compléter
+  const uniques = [];
+  for (let i = 0; i < tableau.length; i++) {
+    if (!uniques.includes(tableau[i])) {
+      uniques.push(tableau[i]);
+    }
+  }
+  return uniques;
 };
