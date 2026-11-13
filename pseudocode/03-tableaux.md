@@ -135,15 +135,22 @@ FIN
 ## Exo 6
 
 ```text
-Algorithme pour
+Algorithme pour retourner un nouveau tableau dans l'ordre inverse. Sans utiliser .reverse().
 
-Variable
+Variables
+tab[] : NUMBER
+i : NUMBER
+inverse[] : NUMBER
 
 INIT
-    LIRE
+    LIRE tab[]
 START
-    DEBUT FUNCTION ... (ARG)
-
+    DEBUT FUNCTION inverser (tab[])
+        inverse[] <- []
+        POUR i tab[].length -1 à 0 par pas de -1 FAIRE
+            AJOUTER les valeurs de tab[i] à inverse[]
+        FIN POUR
+        RETURN inverse[]    
     FIN FUNCTION
 FIN
 ```
@@ -151,15 +158,20 @@ FIN
 ## Exo 7
 
 ```text
-Algorithme pour
+Algorithme pour retourner un nouveau tableau sans les doublons, dans l'ordre d'apparition.
 
-Variable
+Variables
+tab[] : NUMBER
+i : NUMBER
+uniques[]
 
 INIT
-    LIRE
+    LIRE tab[]
 START
-    DEBUT FUNCTION ... (ARG)
+    DEBUT FUNCTION sansDoublons (tab[])
 
+    
+    RETURN uniques[]
     FIN FUNCTION
 FIN
 ```
