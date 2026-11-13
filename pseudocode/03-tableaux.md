@@ -1,3 +1,5 @@
+# Pseudocode chapitre 03-tableaux
+
 ## Exo 1
 
 ```text
@@ -169,9 +171,13 @@ INIT
     LIRE tab[]
 START
     DEBUT FUNCTION sansDoublons (tab[])
-
-    
-    RETURN uniques[]
+        uniques[] <- []
+        POUR i de 0 à tab[].length par pas de 1 FAIRE
+            SI uniques[] ne contient pas tab[i]
+                AJOUTER tab[i] à uniques[]
+            FIN SI
+        FIN POUR
+        RETURN uniques[]
     FIN FUNCTION
 FIN
 ```
