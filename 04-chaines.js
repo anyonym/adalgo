@@ -9,8 +9,12 @@
  * @example inverserChaine("bonjour") → "ruojnob"
  */
 export const inverserChaine = (chaine) => {
-  // à compléter
-}
+  	if (chaine.length === 0) {
+    	return null
+  	} else {
+    	return chaine.split("").reverse().join("");
+  	}
+};
 
 /**
  * Retourne true si la chaîne se lit de la même façon dans les deux sens.
@@ -19,7 +23,13 @@ export const inverserChaine = (chaine) => {
  * @example estPalindrome("kayak") → true / estPalindrome("bonjour") → false
  */
 export const estPalindrome = (chaine) => {
-  // à compléter
+  	if (chaine !== chaine.split("").reverse().join("")) {
+    	return false
+  	} else if (chaine.length < 2) {
+		return null
+  	} else {
+		return true
+  	}
 }
 
 /**
@@ -29,8 +39,14 @@ export const estPalindrome = (chaine) => {
  * @example compterVoyelles("bonjour") → 3
  */
 export const compterVoyelles = (chaine) => {
-  // à compléter
-}
+    let compteur = 0;
+    for (let i = 0; i < chaine.length; i++) {
+        if ("aeiouy".includes(chaine[i].toLowerCase())) {
+            compteur++;
+        }
+    }
+    return compteur;
+};
 
 /**
  * [FACULTATIF]
