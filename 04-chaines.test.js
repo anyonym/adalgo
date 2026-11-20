@@ -6,17 +6,35 @@ import { inverserChaine, estPalindrome, compterVoyelles, capitaliser, tronquer, 
 
 // Cas à couvrir : chaîne normale, chaîne vide.
 describe("inverserChaine", () => {
-  it.todo("à compléter")
+  it("retourne 'esrevni' en 'inverse'", () => {
+    expect(inverserChaine("esrevni")).toEqual("inverse");
+  })
+  it("retourne null d'une chaîne vide", () => {
+    expect(inverserChaine("")).toEqual(null);
+  })
 })
 
 // Cas à couvrir : palindrome, non-palindrome, un seul caractère.
 describe("estPalindrome", () => {
-  it.todo("à compléter")
+  it("retourne true si palindrome", () => {
+    expect(estPalindrome("level")).toEqual(true)
+  })
+  it("retourne false si non-palindrome", () => {
+    expect(estPalindrome("reveur")).toEqual(false)
+  })
+  it("retourne null si un seul caractère", () => {
+    expect(estPalindrome("v")).toEqual(null)
+  })
 })
 
 // Cas à couvrir : chaîne avec voyelles, chaîne sans voyelle.
 describe("compterVoyelles", () => {
-  it.todo("à compléter")
+  it("retourne 3 pour 'azerty'", () => {
+    expect(compterVoyelles("azerty")).toEqual(3)
+  })
+  it("retourne 0 pour 'grrr'", () => {
+    expect(compterVoyelles("grrr")).toEqual(0)
+  })
 })
 
 // [FACULTATIF] Cas à couvrir : chaîne mixte (boNJOUR → Bonjour), chaîne déjà correcte.

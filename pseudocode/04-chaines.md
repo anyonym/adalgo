@@ -1,0 +1,188 @@
+# Pseudocode chapitre 04-chaines
+
+## Exo 1
+
+```text
+Algorithme pour inverser une chaîne de caractères
+
+Variables
+chaine : STR
+resultat : STR
+i : NUMBER
+
+INIT
+    LIRE chaine
+START
+    DEBUT FUNCTION inverserChaine (chaine)
+        resultat <- ""
+        POUR i de 0 à chaine.length -1 par pas de 1 FAIRE
+            SI chaine.length = 0 
+                RETURN null
+            SINON
+                resultat = resultat + chaine[i]
+            FIN SI
+        FIN POUR
+        RETURN resultat
+    FIN FUNCTION
+FIN
+```
+
+## Exo 2
+
+```text
+Algorithme pour vérifier si la chaîne de caractère est un palindrome
+
+Variables
+chaine : STR
+resultat : BOOLEEN
+i : NUMBER
+
+INIT
+    LIRE chaine
+START
+    DEBUT FUNCTION estPalindrome (chaine)
+        POUR i de 0 à chaine.length -1 par pas de 1 FAIRE
+            SI chaine !== chaine 
+                RETURN false
+            SINON SI chaine.length < 2
+                RETURN null
+            SINON
+                RETURN true
+        FIN POUR 
+        RETURN resultat
+    FIN FUNCTION
+FIN
+```
+
+## Exo 3
+
+```text
+Algorithme pour compter les voyelles dans une chaîne de caractères
+
+Variables
+chaine : STR
+compteur : NUMBER
+i : NUMBER
+
+INIT
+    LIRE chaine
+START
+    DEBUT FUNCTION compterVoyelles (chaine)
+        compteur <- 0
+        POUR i de 0 à chaine.length - 1
+            SI chaine[i] EST UNE VOYELLE (a, e, i, o, u, y)
+                compteur ← compteur + 1
+            FIN SI
+        FIN POUR
+        RETURN compteur
+    FIN FUNCTION
+FIN
+```
+
+## Exo 4
+
+```text
+Algorithme pour 
+
+Variables
+
+
+INIT
+    LIRE
+START
+    DEBUT FUNCTION ... (...)
+        
+      
+    FIN FUNCTION
+FIN
+```
+
+## Exo 5
+
+```text
+Algorithme pour 
+
+Variables
+
+
+INIT
+    LIRE
+START
+    DEBUT FUNCTION ... (...)
+        
+      
+    FIN FUNCTION
+FIN
+```
+
+## Exo 6
+
+```text
+Algorithme pour 
+
+Variables
+
+
+INIT
+    LIRE
+START
+    DEBUT FUNCTION ... (...)
+        
+      
+    FIN FUNCTION
+FIN
+```
+
+## Exo 7
+
+```text
+Algorithme pour 
+
+Variables
+
+
+INIT
+    LIRE
+START
+    DEBUT FUNCTION ... (...)
+        
+      
+    FIN FUNCTION
+FIN
+```
+
+## Exo 8
+
+```text
+Algorithme pour 
+
+Variables
+
+
+INIT
+    LIRE
+START
+    DEBUT FUNCTION ... (...)
+        
+      
+    FIN FUNCTION
+FIN
+```
+
+## Exo 9
+
+```text
+Algorithme pour 
+
+Variables
+
+
+INIT
+    LIRE
+START
+    DEBUT FUNCTION ... (...)
+        
+      
+    FIN FUNCTION
+FIN
+```
