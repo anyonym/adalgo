@@ -82,17 +82,22 @@ FIN
 ## Exo 4
 
 ```text
-Algorithme pour 
+Algorithme pour transformer une chaîne de caractère avec la première lettre en majuscule et le reste en minuscule
 
 Variables
-
+chaine : STR
+resultat : STR
+i : NUMBER
 
 INIT
-    LIRE
+    LIRE chaine
 START
-    DEBUT FUNCTION ... (...)
-        
-      
+    DEBUT FUNCTION capitaliser (chaine)
+        resultat <- chaine[0] EN MAJUSCULE
+        POUR i de 1 à chaine.length par pas de 1 FAIRE
+            resultat = AJOUTER chaine[i] EN MINUSCULE
+        FIN POUR
+        RETURN resultat
     FIN FUNCTION
 FIN
 ```
