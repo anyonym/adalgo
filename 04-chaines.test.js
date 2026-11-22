@@ -49,7 +49,12 @@ describe("capitaliser", () => {
 
 // [FACULTATIF] Cas à couvrir : chaîne trop longue, chaîne assez courte.
 describe("tronquer", () => {
-  it.todo("à compléter")
+  it("retourne 'Salut...' pour 'Salut la compagnie', 5", () => {
+    expect(tronquer("Salut la compagnie", 5)).toEqual("Salut...")
+  })
+  it("retourne 'Hello World' pour 'Hello World', 11", () => {
+    expect(tronquer("Hello World", 11)).toEqual("Hello World")
+  })
 })
 
 // [FACULTATIF] Cas à couvrir : plusieurs mots, deux mots.

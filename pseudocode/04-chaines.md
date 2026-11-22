@@ -105,17 +105,22 @@ FIN
 ## Exo 5
 
 ```text
-Algorithme pour 
+Algorithme pour tronquer une chaîne de caractère plus longue que la longueur définie
 
 Variables
-
+chaine : STR
+longueur : NUMBER
 
 INIT
-    LIRE
+    LIRE chaine
+    LIRE longueur
 START
-    DEBUT FUNCTION ... (...)
-        
-      
+    DEBUT FUNCTION tronquer (chaine, longueur)
+        SI chaine.length > longueur ALORS
+            RETOURNER longueur depuis chaine[0] + "..."
+        SINON
+            RETOURNER chaine
+        FIN SI
     FIN FUNCTION
 FIN
 ```

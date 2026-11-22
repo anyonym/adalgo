@@ -75,7 +75,11 @@ export const capitaliser = (chaine) => {
  * @example tronquer("coucou", 10) → "coucou"
  */
 export const tronquer = (chaine, longueur) => {
-  // à compléter
+  if (chaine.length > longueur) {
+    return chaine.slice(0, longueur) + "..."
+  } else {
+    return chaine
+  }
 }
 
 /**
