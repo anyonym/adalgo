@@ -234,17 +234,42 @@ FIN
 ## Exo 9
 
 ```text
-Algorithme pour 
+Algorithme pour comptabiliser le nombre de caractères, de mots et de phrases dans un texte
 
 Variables
-
+texte : STR
+lettres : NUMBER
+mots : NUMBER
+phrases : NUMBER
+dansUnMot : BOOL
+caractere : STR
 
 INIT
-    LIRE
+    LIRE texte
 START
-    DEBUT FUNCTION ... (...)
-        
-      
+    DEBUT FUNCTION analyserTexte (texte)
+        lettres <- 0
+        mots <- 0
+        phrases <- 0
+        dansUnMot <- FAUX
+
+        POUR chaque caractere DANS texte FAIRE
+            SI caractere EST UNE LETTRE ALORS
+                lettres <- lettres + 1
+
+                SI dansUnMot = FAUX ALORS
+                    mots <- mots + 1
+                    dansUnMot <- VRAI
+                FIN SI
+            SINON
+                dansUnMot <- FAUX
+
+                SI caractère = "." OU "!" OU "?" ALORS
+                    phrases <- phrases + 1
+                FIN SI
+            FIN SI
+        FIN POUR
+        RETURN { lettres, mots, phrases }
     FIN FUNCTION
 FIN
 ```
