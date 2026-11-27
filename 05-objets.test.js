@@ -61,7 +61,33 @@ describe("filtrerParAge", () => {
 })
 
 describe("trierParNom", () => {
-  it.todo("à compléter")
+    it("trie les personnes par ordre alphabétique", () => {
+        const personnes = [
+            { nom: "Turing" },
+            { nom: "Lovelace" },
+            { nom: "Hopper" }
+        ]
+        expect(trierParNom(personnes)).toEqual([
+            { nom: "Hopper" },
+            { nom: "Lovelace" },
+            { nom: "Turing" }
+        ])
+    })
+
+    it("retourne un tableau vide si le tableau est vide", () => {
+        expect(trierParNom([])).toEqual([])
+    })
+    // préserver la donnée d'origine
+    it("ne modifie pas le tableau original", () => {
+        const personnes = [
+            { nom: "Turing" },
+            { nom: "Hopper" }
+        ]
+        const copieOriginale = [...personnes];
+
+        trierParNom(personnes);
+        expect(personnes).toEqual(copieOriginale);
+    })
 })
 
 // [FACULTATIF]

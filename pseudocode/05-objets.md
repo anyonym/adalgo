@@ -22,7 +22,7 @@ FIN
 ## Exo 2
 
 ```text
-Algorithme pour retourner des noms complets à partir d'un [{OBJETS}], comparés à un critère d'âge minimum
+Algorithme pour retourner des noms complets correspondant à un critère d'âge minimum
 
 Variables
 personnes : [{OBJETS}]
@@ -41,17 +41,23 @@ FIN
 ## Exo 3
 
 ```text
-Algorithme pour 
+Algorithme pour retourner un tableau d'objets trié par ordre alphabétique
 
 Variables
+personnes : [{OBJETS}]
+resultat : []
 
 
 INIT
-    LIRE
+    LIRE personnes
 START
-    DEBUT FUNCTION ... (...)
-        
-      
+    DEBUT FUNCTION trierParNom (personnes)
+        resultat <- COPIE de personnes
+
+        TRIER resultat PAR ORDRE ALPHABÉTIQUE
+            EN COMPARANT personne.nom
+            
+        RETURN resultat
     FIN FUNCTION
 FIN
 ```
