@@ -190,17 +190,43 @@ FIN
 ## Exo 8
 
 ```text
-Algorithme pour 
+Algorithme pour vérifier la conformité d'un mot de passe
 
 Variables
-
+mdp : STR
+minuscule : BOOLEEN
+majuscule : BOOLEEN
+chiffre : BOOLEEN
+special : BOOLEEN
+i : NUMBER
+caractere : STR
 
 INIT
-    LIRE
+    LIRE mdp
 START
-    DEBUT FUNCTION ... (...)
-        
-      
+    DEBUT FUNCTION validerMotDePasse (mdp)
+        SI mdp.length < 6 OU mdp.length > 12 ALORS
+            RETURN faux
+        FIN SI
+
+        minuscule <- faux
+        majuscule <- faux
+        chiffre <- faux
+        special <- faux
+
+        POUR i DE 0 à mdp.length - 1 par pas de 1 FAIRE
+            caractere <- mdp[i]
+            SI caractere = minuscule ALORS
+                minuscule <- VRAI
+            SINON SI caractere = majuscule ALORS
+                majuscule <- VRAI
+            SINON SI caractere = chiffre ALORS
+                chiffre <- VRAI
+            SINON SI caractere = "$" OU "#" OU "@" ALORS
+                special <- VRAI
+            FIN SI
+        FIN POUR
+        RETURN minuscule ET majuscule ET chiffre ET special
     FIN FUNCTION
 FIN
 ```

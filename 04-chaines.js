@@ -65,7 +65,6 @@ export const capitaliser = (chaine) => {
 
 /**
  * [FACULTATIF]
- * [FACULTATIF]
  * Si la chaîne dépasse longueur caractères, retourne les longueur premiers
  * caractères suivis de "...". Sinon retourne la chaîne telle quelle.
  * @param {string} chaine
@@ -130,7 +129,6 @@ export const toSnakeCase = (str) => {
 
 /**
  * [FACULTATIF]
- * [FACULTATIF]
  * Retourne true si le mot de passe respecte toutes ces règles :
  * - entre 6 et 12 caractères
  * - au moins une lettre minuscule
@@ -143,11 +141,33 @@ export const toSnakeCase = (str) => {
  * @example validerMotDePasse("l#H1@") → false  (trop court)
  */
 export const validerMotDePasse = (mdp) => {
-  // à compléter
+    // Vérification entre 6 et 12 caractères
+    if (mdp.length < 6 || mdp.length > 12) {
+        return false
+    }
+    let minuscule = false;
+    let majuscule = false;
+    let chiffre = false;
+    let special = false;
+    // Parcours du mot de passe
+    for (let i = 0; i < mdp.length; i++) {
+        let caractere = mdp[i];
+        
+        if (caractere >= "a" && caractere <= "z") {
+            minuscule = true;
+        } else if (caractere >= "A" && caractere <= "Z") {
+            majuscule = true;
+        } else if (caractere >= "0" && caractere <= "9") {
+            chiffre = true;
+        } else if (caractere === "$" || caractere === "#" || caractere === "@") {
+            special = true;
+        }
+    }
+    // Toutes les conditions doivent être validées
+    return minuscule && majuscule && chiffre && special
 }
 
 /**
- * [FACULTATIF]
  * [FACULTATIF]
  * Analyse un texte et retourne un objet { lettres, mots, phrases }.
  * - lettres : nombre de lettres (sans espaces ni ponctuation)
