@@ -39,27 +39,63 @@ describe("compterVoyelles", () => {
 
 // [FACULTATIF] Cas à couvrir : chaîne mixte (boNJOUR → Bonjour), chaîne déjà correcte.
 describe("capitaliser", () => {
-  it.todo("à compléter")
+  it("retourne 'Nantes' de 'nanTES'", () => {
+    expect(capitaliser("nanTES")).toEqual("Nantes")
+  })
+   it("retourne 'Hubertine' de 'Hubertine'", () => {
+    expect(capitaliser("Hubertine")).toEqual("Hubertine")
+  })
 })
 
 // [FACULTATIF] Cas à couvrir : chaîne trop longue, chaîne assez courte.
 describe("tronquer", () => {
-  it.todo("à compléter")
+  it("retourne 'Salut...' pour 'Salut la compagnie', 5", () => {
+    expect(tronquer("Salut la compagnie", 5)).toEqual("Salut...")
+  })
+  it("retourne 'Hello World' pour 'Hello World', 11", () => {
+    expect(tronquer("Hello World", 11)).toEqual("Hello World")
+  })
 })
 
 // [FACULTATIF] Cas à couvrir : plusieurs mots, deux mots.
 describe("toCamelCase", () => {
-  it.todo("à compléter")
+  it("convertit une chaîne contenant deux mots", () => {
+    expect(toCamelCase("mon_nom")).toBe("monNom")
+  })
+
+  it("convertit une chaîne contenant plusieurs mots", () => {
+    expect(toCamelCase("mon_exemple_de_nom")).toBe("monExempleDeNom")
+  })
 })
 
 // [FACULTATIF] Même pattern inverse.
 describe("toSnakeCase", () => {
-  it.todo("à compléter")
+  it("convertit une chaîne contenant deux mots", () => {
+    expect(toSnakeCase("monNom")).toBe("mon_nom")
+  })
+
+  it("convertit une chaîne contenant plusieurs mots", () => {
+    expect(toSnakeCase("monNomDeVariable")).toBe("mon_nom_de_variable")
+  })
 })
 
 // [FACULTATIF] Cas à couvrir : valide, trop court, pas de chiffre, pas de majuscule.
 describe("validerMotDePasse", () => {
-  it.todo("à compléter")
+    it("accepte un mot de passe valide", () => {
+        expect(validerMotDePasse("el3H1@f")).toBe(true)
+    })
+
+    it("refuse un mot de passe trop court", () => {
+        expect(validerMotDePasse("l#H1@")).toBe(false)
+    })
+
+    it("refuse un mot de passe sans chiffre", () => {
+        expect(validerMotDePasse("bonjour@A")).toBe(false)
+    })
+
+     it("refuse un mot de passe sans majuscule", () => {
+        expect(validerMotDePasse("el3h1@f")).toBe(false)
+    })
 })
 
 // [FACULTATIF] Cas à couvrir : texte simple, texte vide.

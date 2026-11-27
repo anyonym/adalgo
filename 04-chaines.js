@@ -14,7 +14,7 @@ export const inverserChaine = (chaine) => {
   	} else {
     	return chaine.split("").reverse().join("");
   	}
-};
+}
 
 /**
  * Retourne true si la chaîne se lit de la même façon dans les deux sens.
@@ -45,8 +45,8 @@ export const compterVoyelles = (chaine) => {
             compteur++;
         }
     }
-    return compteur;
-};
+    return compteur
+}
 
 /**
  * [FACULTATIF]
@@ -56,11 +56,14 @@ export const compterVoyelles = (chaine) => {
  * @example capitaliser("boNJOUR") → "Bonjour"
  */
 export const capitaliser = (chaine) => {
-  // à compléter
+  let resultat = chaine[0].toUpperCase();
+  for (let i = 1; i < chaine.length; i++) {
+    resultat += chaine[i].toLowerCase();
+  }
+  return resultat
 }
 
 /**
- * [FACULTATIF]
  * [FACULTATIF]
  * Si la chaîne dépasse longueur caractères, retourne les longueur premiers
  * caractères suivis de "...". Sinon retourne la chaîne telle quelle.
@@ -71,7 +74,11 @@ export const capitaliser = (chaine) => {
  * @example tronquer("coucou", 10) → "coucou"
  */
 export const tronquer = (chaine, longueur) => {
-  // à compléter
+  if (chaine.length > longueur) {
+    return chaine.slice(0, longueur) + "..."
+  } else {
+    return chaine
+  }
 }
 
 /**
@@ -82,7 +89,22 @@ export const tronquer = (chaine, longueur) => {
  * @example toCamelCase("mon_nom_de_variable") → "monNomDeVariable"
  */
 export const toCamelCase = (str) => {
-  // à compléter
+    let resultat = "";
+    let majuscule = false;
+
+    for (let i = 0; i < str.length; i++) {
+        if (str[i] === "_") {
+            majuscule = true;
+        } else {
+            if (majuscule === true) {
+                resultat += str[i].toUpperCase();
+                majuscule = false;
+            } else {
+                resultat += str[i];
+            }
+        }
+    }
+    return resultat
 }
 
 /**
@@ -93,11 +115,19 @@ export const toCamelCase = (str) => {
  * @example toSnakeCase("monNomDeVariable") → "mon_nom_de_variable"
  */
 export const toSnakeCase = (str) => {
-  // à compléter
+    let resultat = "";
+
+    for (let i = 0; i < str.length; i++) {
+        if (str[i] === str[i].toUpperCase() && str[i] !== str[i].toLowerCase()) {
+            resultat += "_" + str[i].toLowerCase();
+        } else {
+            resultat += str[i];
+        }
+    }
+    return resultat
 }
 
 /**
- * [FACULTATIF]
  * [FACULTATIF]
  * Retourne true si le mot de passe respecte toutes ces règles :
  * - entre 6 et 12 caractères
@@ -111,11 +141,33 @@ export const toSnakeCase = (str) => {
  * @example validerMotDePasse("l#H1@") → false  (trop court)
  */
 export const validerMotDePasse = (mdp) => {
-  // à compléter
+    // Vérification entre 6 et 12 caractères
+    if (mdp.length < 6 || mdp.length > 12) {
+        return false
+    }
+    let minuscule = false;
+    let majuscule = false;
+    let chiffre = false;
+    let special = false;
+    // Parcours du mot de passe
+    for (let i = 0; i < mdp.length; i++) {
+        let caractere = mdp[i];
+        
+        if (caractere >= "a" && caractere <= "z") {
+            minuscule = true;
+        } else if (caractere >= "A" && caractere <= "Z") {
+            majuscule = true;
+        } else if (caractere >= "0" && caractere <= "9") {
+            chiffre = true;
+        } else if (caractere === "$" || caractere === "#" || caractere === "@") {
+            special = true;
+        }
+    }
+    // Toutes les conditions doivent être validées
+    return minuscule && majuscule && chiffre && special
 }
 
 /**
- * [FACULTATIF]
  * [FACULTATIF]
  * Analyse un texte et retourne un objet { lettres, mots, phrases }.
  * - lettres : nombre de lettres (sans espaces ni ponctuation)
