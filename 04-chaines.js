@@ -178,6 +178,26 @@ export const validerMotDePasse = (mdp) => {
  * @returns {{ lettres: number, mots: number, phrases: number }}
  * @example analyserTexte("Bonjour monde.") → { lettres: 12, mots: 2, phrases: 1 }
  */
+
 export const analyserTexte = (texte) => {
-  // à compléter
+    let lettres = 0;
+    let mots = 0;
+    let phrases = 0;
+    let dansUnMot = false;
+
+    for (const caractere of texte) {
+        if (/\p{L}/u.test(caractere)) {
+            lettres++;
+            if (dansUnMot === false) {
+                mots++;
+                dansUnMot = true;
+            }
+        } else {
+            dansUnMot = false;
+            if (caractere === "." || caractere === "!" || caractere === "?") {
+                phrases++;
+            }
+        }
+    }
+    return { lettres, mots, phrases }
 }

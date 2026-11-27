@@ -101,5 +101,35 @@ describe("validerMotDePasse", () => {
 // [FACULTATIF] Cas à couvrir : texte simple, texte vide.
 // Rappel : le résultat est un objet { lettres, mots, phrases } — utilise .toEqual().
 describe("analyserTexte", () => {
-  it.todo("à compléter")
+    it("analyse un texte simple", () => {
+        expect(analyserTexte("Bonjour monde.")).toEqual({
+            lettres: 12,
+            mots: 2,
+            phrases: 1
+        })
+    })
+
+    it("retourne des compteurs à zéro pour un texte vide", () => {
+        expect(analyserTexte("")).toEqual({
+            lettres: 0,
+            mots: 0,
+            phrases: 0
+        })
+    })
+
+    it("compte correctement plusieurs phrases", () => {
+        expect(analyserTexte("Bonjour ! Comment allez-vous ?")).toEqual({
+            lettres: 23,
+            mots: 4,
+            phrases: 2
+        })
+    })
+
+    it("prend en compte les lettres accentuées", () => {
+        expect(analyserTexte("Été magnifique.")).toEqual({
+            lettres: 13,
+            mots: 2,
+            phrases: 1
+        })
+    })
 })
