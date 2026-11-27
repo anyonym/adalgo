@@ -5,7 +5,17 @@ import { fullName, filtrerParAge, trierParNom, grouperParVille, statistiques, pr
 // Plus d'indications sur les cas — choisis toi-même ce qui est pertinent à tester.
 
 describe("fullName", () => {
-  it.todo("à compléter")
+    it("retourne le prénom et le nom séparés par un espace", () => {
+        expect(fullName({ prenom: "Nikola", nom: "Sirkis" })).toBe("Nikola Sirkis")
+    })
+
+    it("fonctionne avec un nom composé", () => {
+        expect(fullName({ prenom: "oLi", nom: "dE SaT" })).toBe("oLi dE SaT")
+    })
+
+    it("retourne une chaîne vide si prénom et nom sont vides", () => {
+        expect(fullName({ prenom: "", nom: "" })).toBe(" ")
+    })
 })
 
 describe("filtrerParAge", () => {
