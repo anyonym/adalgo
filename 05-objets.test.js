@@ -19,7 +19,45 @@ describe("fullName", () => {
 })
 
 describe("filtrerParAge", () => {
-  it.todo("à compléter")
+    it("retourne uniquement les personnes ayant l'âge minimum requis", () => {
+        const personnes = [
+            { nom: "Ada", age: 28 },
+            { nom: "Alan", age: 17 }
+        ]
+        expect(filtrerParAge(personnes, 18)).toEqual([
+            { nom: "Ada", age: 28 }
+        ])
+    })
+
+     it("conserve les personnes ayant exactement l'âge minimum", () => {
+        const personnes = [
+            { nom: "Ada", age: 18 },
+            { nom: "Alan", age: 17 }
+        ]
+        expect(filtrerParAge(personnes, 18)).toEqual([
+            { nom: "Ada", age: 18 }
+        ])
+    })
+
+    it("retourne un tableau vide si personne ne respecte la condition", () => {
+        const personnes = [
+            { nom: "Ada", age: 15 },
+            { nom: "Alan", age: 17 }
+        ]
+        expect(filtrerParAge(personnes, 18)).toEqual([])
+    })
+
+    it("retourne toutes les personnes si elles respectent la condition", () => {
+        const personnes = [
+            { nom: "Ada", age: 28 },
+            { nom: "Alan", age: 25 }
+        ]
+        expect(filtrerParAge(personnes, 18)).toEqual(personnes)
+    })
+
+    it("retourne un tableau vide si le tableau est vide", () => {
+        expect(filtrerParAge([], 18)).toEqual([])
+    })
 })
 
 describe("trierParNom", () => {

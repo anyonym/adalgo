@@ -22,17 +22,18 @@ FIN
 ## Exo 2
 
 ```text
-Algorithme pour 
+Algorithme pour retourner des noms complets à partir d'un [{OBJETS}], comparés à un critère d'âge minimum
 
 Variables
+personnes : [{OBJETS}]
+ageMin : NUMBER
 
 
 INIT
-    LIRE
+    LIRE personnes
 START
-    DEBUT FUNCTION ... (...)
-        
-      
+    DEBUT FUNCTION filtrerParAge (personnes, ageMin)
+        RETURN personnes FILTRE par [personne] dont AGE personne >= ageMin 
     FIN FUNCTION
 FIN
 ```
