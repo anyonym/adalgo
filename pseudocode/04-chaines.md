@@ -128,17 +128,33 @@ FIN
 ## Exo 6
 
 ```text
-Algorithme pour 
+Algorithme pour convertir une chaîne de caractère de snake_case en camelCase
 
 Variables
-
+str : STR
+resultat : STR
+i : NUMBER
+maj : BOOLEEN
 
 INIT
-    LIRE
+    LIRE str
 START
-    DEBUT FUNCTION ... (...)
-        
-      
+    DEBUT FUNCTION toCamelCase (str)
+        resultat <- ""
+        maj <- faux
+        POUR i de 0 à str.length par pas de 1 FAIRE
+            SI str[i] = "_" ALORS
+                maj = vrai
+            SINON 
+                SI maj = vrai ALORS
+                    Ajouter str[i]en majuscule
+                    maj = faux
+                SINON 
+                    Ajouter str[i]
+                FIN SI
+            FIN SI
+        FIN POUR
+        RETURN resultat
     FIN FUNCTION
 FIN
 ```
@@ -146,17 +162,27 @@ FIN
 ## Exo 7
 
 ```text
-Algorithme pour 
+Algorithme pour convertir une chaîne de caractère de camelCase en snake_case
 
 Variables
-
+str : STR
+resultat : STR
+i : NUMBER
 
 INIT
-    LIRE
+    LIRE str
 START
-    DEBUT FUNCTION ... (...)
-        
-      
+    DEBUT FUNCTION toSnakeCase (str)
+        resultat <- ""
+        maj <- faux
+        POUR i de 0 à str.length par pas de 1 FAIRE
+            SI str[i] est une majuscule ALORS
+                resultat ← resultat + "_" + minuscule(str[i])
+            SINON
+                resultat ← resultat + str[i]
+            FIN SI
+        FIN POUR
+        RETURN resultat
     FIN FUNCTION
 FIN
 ```

@@ -59,12 +59,24 @@ describe("tronquer", () => {
 
 // [FACULTATIF] Cas à couvrir : plusieurs mots, deux mots.
 describe("toCamelCase", () => {
-  it.todo("à compléter")
+  it("convertit une chaîne contenant deux mots", () => {
+    expect(toCamelCase("mon_nom")).toBe("monNom")
+  })
+
+  it("convertit une chaîne contenant plusieurs mots", () => {
+    expect(toCamelCase("mon_exemple_de_nom")).toBe("monExempleDeNom")
+  })
 })
 
 // [FACULTATIF] Même pattern inverse.
 describe("toSnakeCase", () => {
-  it.todo("à compléter")
+  it("convertit une chaîne contenant deux mots", () => {
+    expect(toSnakeCase("monNom")).toBe("mon_nom")
+  })
+
+  it("convertit une chaîne contenant plusieurs mots", () => {
+    expect(toSnakeCase("monNomDeVariable")).toBe("mon_nom_de_variable")
+  })
 })
 
 // [FACULTATIF] Cas à couvrir : valide, trop court, pas de chiffre, pas de majuscule.

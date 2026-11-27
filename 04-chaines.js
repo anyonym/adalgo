@@ -14,7 +14,7 @@ export const inverserChaine = (chaine) => {
   	} else {
     	return chaine.split("").reverse().join("");
   	}
-};
+}
 
 /**
  * Retourne true si la chaîne se lit de la même façon dans les deux sens.
@@ -45,8 +45,8 @@ export const compterVoyelles = (chaine) => {
             compteur++;
         }
     }
-    return compteur;
-};
+    return compteur
+}
 
 /**
  * [FACULTATIF]
@@ -60,8 +60,8 @@ export const capitaliser = (chaine) => {
   for (let i = 1; i < chaine.length; i++) {
     resultat += chaine[i].toLowerCase();
   }
-  return resultat;
-};
+  return resultat
+}
 
 /**
  * [FACULTATIF]
@@ -90,7 +90,22 @@ export const tronquer = (chaine, longueur) => {
  * @example toCamelCase("mon_nom_de_variable") → "monNomDeVariable"
  */
 export const toCamelCase = (str) => {
-  // à compléter
+    let resultat = "";
+    let majuscule = false;
+
+    for (let i = 0; i < str.length; i++) {
+        if (str[i] === "_") {
+            majuscule = true;
+        } else {
+            if (majuscule === true) {
+                resultat += str[i].toUpperCase();
+                majuscule = false;
+            } else {
+                resultat += str[i];
+            }
+        }
+    }
+    return resultat
 }
 
 /**
@@ -101,7 +116,16 @@ export const toCamelCase = (str) => {
  * @example toSnakeCase("monNomDeVariable") → "mon_nom_de_variable"
  */
 export const toSnakeCase = (str) => {
-  // à compléter
+    let resultat = "";
+
+    for (let i = 0; i < str.length; i++) {
+        if (str[i] === str[i].toUpperCase() && str[i] !== str[i].toLowerCase()) {
+            resultat += "_" + str[i].toLowerCase();
+        } else {
+            resultat += str[i];
+        }
+    }
+    return resultat
 }
 
 /**
